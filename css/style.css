@@ -14,19 +14,72 @@ body h2 {
 
 .selecao_jogos {
   width: 300px;
-  min-height: 250px;
+  height: 350px;
   margin-bottom: 1rem;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.selecao_jogos::-webkit-scrollbar {
+  width: 6px;          /* width of the entire scrollbar */
+  cursor: pointer;
+}
+
+.selecao_jogos::-webkit-scrollbar-track {
+  background: transparent;        /* color of the tracking area */
+}
+
+.selecao_jogos::-webkit-scrollbar-thumb {
+  background-color: rgb(176, 176, 182);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid transparent;  /* creates padding around scroll thumb */
+  cursor: pointer
 }
 
 .game_button {
-  height: 40px;
-
   display: flex;
   align-items: center;
+  justify-content: center;
+
+  margin-bottom: 1rem;
 }
 
-.game_button input {
-  margin-right: 0.6rem;
+.game_button label {
+  cursor: pointer;
+  border: 1px solid #404040;
+  border-radius: 8px;
+
+  width: 250px;
+  height: 70px;
+
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+
+  padding: 0 1rem;
+}
+
+.game_button label span{
+ display: flex;
+ justify-content: center;
+
+ width: 60%;
+}
+
+.game_button img{
+  width: 90px;
+  height: 60px;
+
+  border-radius: 4px;
+}
+
+.mark {
+  border: 3px solid #5fccea !important;
+}
+
+.radio {
+  visibility: hidden;
 }
 
 .buttons {
